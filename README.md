@@ -3,7 +3,7 @@ In 2012, Notch developed a JavaScript version of [Minecraft 4k](https://minecraf
 
 The texture generation algorithm was taken from [this version](https://jsfiddle.net/2yr59/23/) of Minecraft 4k.
 
-The main difference is the Java version uses a seed to always generate the same textures, but there is no way to seed the PRNG in JavaScript so the textures are randomly generated.
+The main difference is the Java version uses a set seed to always generate the same textures, but there is no way to seed the PRNG in JavaScript so the textures are randomly generated.
 
 ### Why are there three transparent textures at the top of the page?
 The algorithm generates three entirely black (0x000000) textures to act as air blocks, as black is considered transparent in the rendering code.
