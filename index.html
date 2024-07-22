@@ -5,24 +5,18 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+	<link rel="stylesheet" href="styles/style.css" />
+
 	<title>Minecraft 4k Textures</title>
-
-	<style>
-		body {
-			margin: 0;
-			width: 768px;
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(16, 1fr);
-		}
-
-		canvas {
-			image-rendering: pixelated;
-		}
-	</style>
 </head>
 
 <body>
+	<div class="content-container">
+		<button id="save">Save</button>
+		<div class="texture-canvas-container"></div>
+	</div>
+
+	<script src="scripts/jszip.js"></script>
 	<script src="scripts/textures.js"></script>
 	<script src="scripts/main.js"></script>
 </body>
