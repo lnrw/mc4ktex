@@ -12,7 +12,7 @@ var textures = {
 for (var texture = 1; texture < 16; texture++) {
 
 	// Pick a random brightness
-	var br = 255; // - ((Math.random() * 96) | 0); // (The "|0" ensures integer)
+	var br = 255 - ((Math.random() * 96) | 0); // (The "|0" ensures integer)
 
 	// The map for the texture - 3 16x16 squares.
 	// Square 1: y = [0,15] - Top of cube
