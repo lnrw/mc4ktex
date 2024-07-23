@@ -6,7 +6,7 @@ The comments for the texture generation algorithm were taken from [this version]
 The main difference is the Java version uses a set seed to always generate the same textures, but the PRNG in JavaScript cannot be seeded so the textures are randomly generated.
 
 ### Why are there three transparent textures at the top of the page?
-The algorithm doesn't assign a value to the first 768 elements (3 textures) of the `texmap` array so when they are accessed, their value is `undefined`. The rendering code in Minecraft 4k uses bitwise operators on the values from the `texmap` array. Bitwise operators convert operands to 32-bit integers so `undefined` is converted to `0`. This means the first three textures are entirely black (`0x000000`). Black is considered transparent in the rendering code, so these textures are rendered as air blocks.
+The algorithm doesn't assign a value to the first 768 elements (3 16px &times; 16px textures) of the `texmap` array so when they are accessed, their value is `undefined`. The rendering code in Minecraft 4k uses bitwise operators on the values from the `texmap` array. Bitwise operators convert operands to 32-bit integers so `undefined` is converted to `0`. This means the first three textures are entirely black (`0x000000`). Black is considered transparent in the rendering code, so these textures are rendered as air blocks.
 
 Pseudocode to illustrate this (ray casting):
 ```
