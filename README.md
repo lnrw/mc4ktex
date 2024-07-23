@@ -6,9 +6,9 @@ The texture generation algorithm was taken from [this version](https://jsfiddle.
 The main difference is the Java version uses a set seed to always generate the same textures, but there is no way to seed the PRNG in JavaScript so the textures are randomly generated.
 
 ### Why are there three transparent textures at the top of the page?
-The algorithm generates three entirely black (0x000000) textures to act as air blocks, as black is considered transparent in the rendering code.
+The algorithm generates three entirely black (0x000000) textures to act as air blocks, as black is considered transparent in the game's rendering code.
 
-Pseudocode to illustrate this:
+Ray casting pseudocode to illustrate this:
 ```
 if (color > 0) then
   draw pixel
@@ -18,4 +18,4 @@ else
 endif
 ```
 
-Therefore, for completeness, these textures are included and displayed as transparent.
+Therefore, for completeness, these textures are included and rendered as transparent.
