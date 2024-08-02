@@ -30,14 +30,14 @@ body {
 }
 
 .texture-canvas-container {
-	width: 768px;
+	width: min(768px, 100vw);
 	display: inline-grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(16, 1fr);
 }
 
 .texture-canvas {
-	width: 256px;
-	height: 256px;
+	width: min(256px, calc(100vw / 3));
+	height: min(256px, calc(100vw / 3));
 	image-rendering: pixelated;
 }
